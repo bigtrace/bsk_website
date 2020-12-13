@@ -1,0 +1,62 @@
+<h1 class="text-center mb-3">{{title}}</h1>
+
+<article class="media content-section">
+
+
+    <div class="card-body">
+        <h5 class="card-title">功能1：通过tbs算出bsk</h5>
+        <form action="/encode" method="GET" class="mb-4">
+
+            <div class="form-group">
+                <label for="tbs">输入你的tbs值（如果用我给的例子，请删去 例如：） </label>
+                <input type="text" name="tbs" class="form-control" value="例如：9c4ee184284c21a31607891731">
+            </div>
+            <input class="btn btn-primary btn-block" type="submit" name="submit" value="加密成bsk" />
+
+        </form>
+
+    </div>
+
+
+</article>
+
+<article class="media content-section">
+    <div class="card-body">
+        <h5 class="card-title">功能2：通过tbs和bsk值，反解出bsk代表的明文信息</h5>
+        <form action="/decode" method="GET" class="mb-4">
+
+            <div class="form-group">
+                <label for="tbs">输入你的tbs值 </label>
+                <input type="text" name="tbs" class="form-control" value="例如：9c4ee184284c21a31607891731">
+            </div>
+
+            <div class="form-group">
+                <label for="bsk">输入想要解码的bsk</label>
+                <input type="text" name="bsk" class="form-control" value="例如：QkFfVEcLGFJTVEcGHhMRABMMEFFZVUJSHxNYVxZfRVdZWEFdGEFfBEMJEUJCQl0VE1sCEwNBUQtHHRpEABoOQWVYDwADFBwVXQgTDRMDCVIDVVAACRgQUwZBCBNQAQIaAQAUAQcVHxNXURZfRUVKQVcUFhcAE1sTAAAAAAAAAAAGBxVBQFRHCxpSR1ZXF1teDxNFWWNDSlBfUBsYGRgUPgtQTF1EXRQAXVUEbhFLEhsaSQAVCRMcVHZAVwNMVkEdBlEXAiAWAwQJVAxcVAYLBQtbAAZXAFkHAw4EVAoIUAQCBxUFChwGcxEdGwIGR18RCQQGCBhBUwJDCRFQUVtLXB0VXwMbWRQRF0RdGBBVAEEIE1ALAQYcAg8OBxsCAQBRDElUBQEDChQFVwUGWREdFF4EGgMRBQMADlMBVFQdGl0DGg5DRkMUVh0UUQYaAxEGCgMJTxYSVhMCFFRZWBBXHUNQABQKF0xLRFIfE1dSFl9FAwgFBQgBUgMdQ0QAFAoVdmx9exEdGxAFR18RCQQKCBhBVgBDCRN4ZXt0Gx0VRAUbWRZVSQAUBh5PXQ1WXhYfQlNcURRdXlRGXFwNQEkLUFVRHlRbAFNFCFxfGlNCS01eWnZdXA5RCxFCFFxbS0AMQEhNX15VUUNRVl9VUkMVDlELEFNZRh5IURFBXg9SXVRRRRRKUkVcXVUBVRcWHUtAU0xBEFBQEx9FWV9bWlhDG0BFWBdBFklSVFtBXVBPVEMAXlRFHFtdV1ZDWx1NDERHSRNVBRACFgFTQghfWEVbaFl1RwdZVhtPFhZXEwIUAwEGUx4TDAATDBBDSkxUGxFCCkEORRFDTVEeGllREAtDGwAAAwYUCBgbGwALUQRJVAgBARsUHFILAFgfAA8HAREVGQYLBQ1PBVBdCA4dHhACVAUdUAYHDwYeFBEIAgMdCFYFVlYYFBwKCQBPAwRTBwIfHB8PAAAbAgQKVwdMSRkABwEUBVYBBFYaHR4BBwwLHQYGBQBbHUdJE08GEAIWLWd9LREdFEUGGgMTelxLUA9YBEoEFgQSEGMKXFUOREIWfmMYCAEZAwoZNF0LUwUDFEoOAEoScBFDXVNnUlpyWEMcBApUGlZTERB/emx5Lx4RDVpaUxBwXVpaWBoRegtGCghUFwwFFgRNBgNZAx8OCBdrWFdWQVgWVgdSSwIOFh4aRlIQC0NVRFhTQ1FWXxdBUFcHWwhNGBhPEmNaAkZYF1YRVV9TXWQRShFM
+">
+            </div>
+            <input class="btn btn-primary btn-block" type="submit" name="submit" value="解密bsk成明文" />
+
+        </form>
+    </div>
+
+</article>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-xs-12">
+            <p>Reference: <a href="https://github.com/8qwe24657913/Analyze_baidu_BSK"> 8qwe24657913/Analyze_baidu_BSK </a></p>
+            <p>我这里基于他的code，根据2020/Dec bsk的版本,做了一个网页版bsk encoder/decoder的小工具</p>
+                        <p>为了功能1里面生成的bsk值可以通过百度验证，我已经hard-code了一些window obj属性。具体原理可以参见repo里面的deobf.js</p>
+            <p>本网页仅为个人兴趣，本人反对发帖机灌水，请不要过度ping此网页，如果百度后台更改代码，该版本的bsk值可能会失效。</p>
+        </div>
+
+
+
+        <div class="col-sm-6 col-md-6 col-xs-12 right-content">
+            <img src="https://s3.ax1x.com/2020/12/14/rm5xGd.png" style="height:200px; margin-left:-15px;" />
+        </div>
+
+    </div>
+</div>
