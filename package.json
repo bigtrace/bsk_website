@@ -15,6 +15,8 @@
     "express-handlebars": "^5.2.0"
   },
   "devDependencies": {
+    "flightplan": "^0.6.20",
+    "fly": "^4.1.9",
     "nodemon": "^2.0.6"
   }
 }
