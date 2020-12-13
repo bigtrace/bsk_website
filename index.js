@@ -36,4 +36,4 @@ app.get('/decode', function(req, res) {
 	res.send(bsk_text);
 });
 
-app.listen(3000);
+app.listen(5500);
